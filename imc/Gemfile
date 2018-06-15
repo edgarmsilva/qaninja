@@ -1,0 +1,5 @@
+source "http://rubygems.org"
+
+gem 'cucumber'
+gem 'cpf_generator'
+gem 'rspec'
