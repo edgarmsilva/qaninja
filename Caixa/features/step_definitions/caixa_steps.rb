@@ -14,14 +14,11 @@ Dado("que eu tenho uma conta com {string} reais") do |saldo_inicial|
     @saldo_final = teste.efetua_saque(@saldo_inicial,@saque_valor)
     expect(@saldo_final.to_s).to eql saldo_fim
 
-    # puts saldo_fim
-    # puts @saldo_final
   end
   
   Então("devo ver a seguinte mensagem: {string}") do |mensagem|
     teste2 = Saque.new
     @msg = teste2.mostra_msg(@saldo_inicial,@saque_valor)
     expect(@msg).to eql mensagem
-    # puts mensagem
-    # puts @msg
+
   end
