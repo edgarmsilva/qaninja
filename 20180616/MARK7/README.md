@@ -1,7 +1,7 @@
 
 
 # projeto mark7
-## gerenciadpr de tarefa
+## gerenciador de tarefa
 
 # features 
 * Login
