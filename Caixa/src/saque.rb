@@ -8,6 +8,7 @@ class Conta
     def saca(valor)
         if saldo > 700
             return "nãõ pode"
+            vish
         elsif valor > @saldo
             return "Saldo insuficiente para saque."
         else
