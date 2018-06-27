@@ -5,7 +5,6 @@ Funcionalidade: Saque em conta corrente
     Posso sacar dinheiro
     Para poder comprar em lugares que não aceitam débito ou crédito
 
-<<<<<<< HEAD
     Cenário: Saque
     Dado que eu tenho uma conta com 1000 reais
     Quando faço um saque no valor de 200 reais
@@ -23,23 +22,4 @@ Funcionalidade: Saque em conta corrente
     Quando faço um saque no valor de 200 reais
     Então 100 reais será meu saldo final
     E devo ver a seguinte mensagem: "Saldo insuficiente para saque."
-=======
-        Cenário: Saque
-            Dado que eu tenho uma conta com "1000" reais
-            Quando faço um saque no valor de "200" reais
-            Então "800" reais será meu saldo final
-            E devo ver a seguinte mensagem: "Saque com sucesso. Muito Obrigado!"
-
-        Cenário: Cliente não tem saldo disponível
-            Dado que eu tenho uma conta com "0" reais
-            Quando faço um saque no valor de "100" reais
-            Então "0" reais será meu saldo final
-            E devo ver a seguinte mensagem: "Saldo insuficiente para saque."
-
-        Cenário: Saque com valor acima do saldo disponível
-            Dado que eu tenho uma conta com "100" reais
-            Quando faço um saque no valor de "200" reais
-            Então "100" reais será meu saldo final
-            E devo ver a seguinte mensagem: "Saldo insuficiente para saque."
->>>>>>> cd7b85c632730a8511e7be676a141ce0bfc8facb
 
