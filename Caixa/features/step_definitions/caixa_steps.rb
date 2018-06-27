@@ -1,27 +1,20 @@
 require_relative '../../src/saque.rb'
 
-Dado("que eu tenho uma conta com {string} reais") do |inicial|
-    @inicial = inicial
+Dado("que eu tenho uma conta com {int} reais") do |saldo_inicial|
+    @conta = Conta.new(saldo_inicial)
   end
   
-  Quando("faço um saque no valor de {string} reais") do |saque_valor|
-    @saque = saque_valor
+  Quando("faço um saque no valor de {int} reais") do |saque_valor|
+    @resultado = @conta.saca(saque_valor)
     
   end
   
-  Então("{string} reais será meu saldo final") do |saldo_fim|
-    teste = Saque.new(@inicial,@saque_valor)
-    @saldo_final = teste.efetua_saque
-    # expect(saldo_final).to eql @resultado_saque.round(2)
+  Então("{int} reais será meu saldo final") do |saldo_fim|
+    expect(@conta.saldo).to eql saldo_fim
 
-    # puts saldo_fim
-    puts @saldo_final
   end
   
   Então("devo ver a seguinte mensagem: {string}") do |mensagem|
-    teste2 = Saque.new(@saldo_inicial,@saque_valor)
-    @msg = teste2.mostra_msg
-    # expect(mensagem).to eql @msg
-    puts mensagem
-    puts @msg
+    expect(@resultado).to eql mensagem
+
   end
