@@ -11,6 +11,7 @@ Dado("que eu tenho uma conta com {int} reais") do |saldo_inicial|
   
   Então("{int} reais será meu saldo final") do |saldo_fim|
     expect(@conta.saldo).to eql saldo_fim
+    puts @conta.saldo
 
   end
   
