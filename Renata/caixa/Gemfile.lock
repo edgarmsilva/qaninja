@@ -1,5 +1,9 @@
 GEM
+<<<<<<< HEAD
+  remote: https://rubygems.org/
+=======
   remote: http://rubygems.org/
+>>>>>>> cd7b85c632730a8511e7be676a141ce0bfc8facb
   specs:
     backports (3.11.3)
     builder (3.2.3)
@@ -38,7 +42,10 @@ GEM
     rspec-support (3.7.1)
 
 PLATFORMS
+<<<<<<< HEAD
+=======
   ruby
+>>>>>>> cd7b85c632730a8511e7be676a141ce0bfc8facb
   x86-mingw32
 
 DEPENDENCIES
