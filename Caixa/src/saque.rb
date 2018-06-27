@@ -1,22 +1,23 @@
 class Saque
     attr_accessor :saldo_inicial, :saque_valor 
 
-    def initialize (saldo_inicial,saque_valor)
-        @saldo_inicial = saldo_inicial.to_f
-        @saque_valor = saque_valor.to_f
+    # def initialize (saldo_inicial,saque_valor)
+    #     @saldo_inicial = saldo_inicial.to_f
+    #     @saque_valor = saque_valor.to_f
         
-    end
+    # end
 
-    def efetua_saque
-        if @saldo_inicial > @saque_valor
-            return saldo_inicial - saque_valor
+    def efetua_saque(saldo_inicial,saque_valor)
+        if (saldo_inicial > saque_valor)
+            res = saldo_inicial - saque_valor
+            return res
             
         else
-            return "deu ruim"
+            return saldo_inicial
         end
     end
 
-    def mostra_msg
+    def mostra_msg(saldo_inicial,saque_valor)
         if saldo_inicial > saque_valor
             return "Saque com sucesso. Muito Obrigado!"
         else
