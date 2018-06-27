@@ -6,7 +6,9 @@ class Conta
     end
 
     def saca(valor)
-        if valor > @saldo
+        if saldo > 700
+            return "nãõ pode"
+        elsif valor > @saldo
             return "Saldo insuficiente para saque."
         else
             @saldo -= valor
