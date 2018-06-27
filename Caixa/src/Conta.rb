@@ -6,8 +6,8 @@ class Conta
     end
 
     def saca(valor)
-        if saldo > 700
-            return "nãõ pode"
+        if valor > 700
+            return "Saque não permitido, Valor acima do limite diário de R$ 700."
         elsif valor > @saldo
             return "Saldo insuficiente para saque."
         else

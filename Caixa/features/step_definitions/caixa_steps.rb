@@ -1,4 +1,4 @@
-require_relative '../../src/saque.rb'
+require_relative '../../src/Conta.rb'
 
 Dado("que eu tenho uma conta com {int} reais") do |saldo_inicial|
     @conta = Conta.new(saldo_inicial)
