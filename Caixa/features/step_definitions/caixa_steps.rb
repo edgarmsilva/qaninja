@@ -6,7 +6,6 @@ Dado("que eu tenho uma conta com {int} reais") do |saldo_inicial|
   
   Quando("faço um saque no valor de {int} reais") do |saque_valor|
     @resultado = @conta.saca(saque_valor)
-    puts @resultado
     
   end
   
