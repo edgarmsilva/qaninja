@@ -1,103 +1,37 @@
 #language: pt
 
+# Automação QA Challenge
+# Autor: Edgar Moreira da Silva
+# 20180725
+
 Funcionalidade: Login
-    Para que eu possa ver as minhas tarefas
+    Para que eu possa acessar minha conta
     Sendo um usuário cadastrado
     Posso logar no sistema
 
-    # Email e senha
-    
-    # DDT => Data Driven Testing
-
-    # @login @Logout
-    # Cenario: Login do usuário
-
-    #     Dado que eu acessei o formulário de Login
-    #     Quando faço login com "eu@papito.io" e "123456"
-    #     Então sou autenticado com sucesso
-    #     E sou redirecionado para o painel de tarefas com a mensagem "Olá, Fernando"
-        
-    # @login_tentativa
-    # Cenario: Senha Inválida
-
-    #     Dado que eu acessei o formulário de Login
-    #     Quando faço login com "eu@papito.io" e "xpto123"
-    #     Então devo ver a mensagem de alerta "Senha inválida."
-    
-    # @login_tentativa
-    # Cenário: Usuário não existe
-
-    #     Dado que eu acessei o formulário de Login
-    #     Quando faço login com "padrequevedo@noequiziste.org" e "123456"
-    #     Então devo ver a mensagem de alerta "Usuário não cadastrado."
-
-    # Cenário: Email incorreto
-
-    #     Dado que eu acessei o formulário de Login
-    #     Quando faço login com "fernando&qaninja.io" e "123456"
-    #     Então devo ver a mensagem de alerta "Email incorreto ou ausente."
-
-
-
-
-# enxugando tudo parte 1: ---------------------------------------------------------------
-# Adição do contexto:
-
-# Contexto: Formulário
-#         Dado que eu acessei o formulário de Login
-
-#     @login @Logout
-#     Cenario: Login do usuário
-
-#         Quando faço login com "eu@papito.io" e "123456"
-#         Então sou autenticado com sucesso
-#         E sou redirecionado para o painel de tarefas com a mensagem "Olá, Fernando"
-        
-#     @login_tentativa
-#     Cenario: Senha Inválida
-
-#         Quando faço login com "eu@papito.io" e "xpto123"
-#         Então devo ver a mensagem de alerta "Senha inválida."
-    
-#     @login_tentativa
-#     Cenário: Usuário não existe
-
-#         Quando faço login com "padrequevedo@noequiziste.org" e "123456"
-#         Então devo ver a mensagem de alerta "Usuário não cadastrado."
-
-#     Cenário: Email incorreto
-
-#         Quando faço login com "fernando&qaninja.io" e "123456"
-#         Então devo ver a mensagem de alerta "Email incorreto ou ausente."
-
-
-
-# enxugando tudo parte 2: ---------------------------------------------------------------
-# Adição do Place Holder:
 
 Contexto: Formulário
-        Dado que eu acessei o formulário de Login
+        Dado que eu acessei a página inicial
 
     @login @Logout
     Cenario: Login do usuário
 
-        Quando faço login com "eu@papito.io" e "123456"
+        Quando faço login com "testeed@testeed.com" e "123456"
         Então sou autenticado com sucesso
-        E sou redirecionado para o painel de tarefas com a mensagem "Olá, Fernando"
+        E sou redirecionado para a tela da minha conta com a mensagem "Welcome to your account."
 
-    Esquema do Cenário: Tentativa de Logar
+    Esquema do Cenário: Logins inválidos
         Quando faço login com "<email>" e "<senha>"
-        Então devo ver a mensagem de alerta "<saida>"
+        Então devo ver a mensagem de alerta "<alerta>"
 
         Exemplos: 
-        | email                        | senha   | saida                       |
-        | eu@papito.io                 | xpto123 | Senha inválida.             |
-        | padrequevedo@noequiziste.org | 123456  | Usuário não cadastrado.     |
-        | fernando&qaninja.io          | 123456  | Email incorreto ou ausente. |
-        |                              | 123456  | Email incorreto ou ausente. |
-        | eu@papito.io                 |         | Senha ausente.              |
+      | email                  | senha  | alerta                     |
+      | testeed@testeed.com    | 1234   | Invalid password.          |
+      | testeed321@testeed.com | 123456 | Authentication failed.     |
+      | testeed&testeed.com    | 123456 | Invalid email address.     |
+      |                        | 123456 | An email address required. |
+      | testeed@testeed.com    |        | Password is required.      |
 
-    
  
 
 

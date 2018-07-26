@@ -1,12 +1,14 @@
-# Projeto Mark7
-## Gerenciador de Tarefas
+# Automação QA Challenge
+
+## Site de compras online
 
 # Features
-* Login
-* Cadastro de usuários
-* Cadastro de tarefas (CRUD) ==> (Create, Read, Update, Delete)
-* Troca de senha
-* Minha conta (atualização cadstral)
-* Finalizar Tarefa
+* Autenticação do usuário, 
+* Criação de um novo usuário 
+* Compra de itens.
 
-## Sprint 1 > Login
+## Sprint 1 > Autenticação do usuário
+>> OK
+
+## Sprint 2 > Criação de um novo usuário
+## Sprint 1 > Compra de itens.
