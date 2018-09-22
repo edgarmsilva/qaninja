@@ -5,11 +5,15 @@ Dado("que eu acessei o formulário de Login") do
 end
 
 Quando("faço login com {string} e {string}") do |email, senha|
-    # @email = 'teste@teste.com'
     @email = email
-    find('input[name=email]').set email
-    find('input[title$=password]').set senha
-    find('button[id*=btnLogin]').click
+
+    @login_page = LoginPage.new
+
+    @login_page.campo_email.set email
+    @login_page.campo_senha.set senha
+    @login_page.botao_entrar.click
+  
+
 
 end
 
@@ -26,8 +30,7 @@ Então("sou redirecionado para o painel de tarefas com a mensagem {string}") do 
 end
 
 Então("devo ver a mensagem de alerta {string}") do |mensagem_alerta|
-    alerta_login = find('.alert-login')
-    expect(alerta_login.text).to eql mensagem_alerta
+    expect(@login_page.alerta_login.text).to eql mensagem_alerta
 end
 
 

@@ -1,5 +1,10 @@
 require 'capybara'
 require 'capybara/cucumber'
+require 'site_prism'
+
+SitePrism.configure do |config|
+    config.use_implicit_waits = true
+  end
 
 Capybara.configure do |config|
     config.default_driver = :selenium_chrome

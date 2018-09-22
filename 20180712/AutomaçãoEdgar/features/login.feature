@@ -3,6 +3,7 @@
 # Automação QA Challenge
 # Autor: Edgar Moreira da Silva
 # 20180725
+# Sprint 1 > Autenticação do usuário
 
 Funcionalidade: Login
     Para que eu possa acessar minha conta
