@@ -4,6 +4,7 @@ Dado("que eu acessei o formulário de Login") do
     @login_page = LoginPage.new
     @navbar = Navbar.new
     @tarefa_page = TarefasPage.new
+    
 end
 
 Quando("faço login com {string} e {string}") do |email, senha|
