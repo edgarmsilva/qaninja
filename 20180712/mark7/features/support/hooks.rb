@@ -1,8 +1,8 @@
 
 
 After('@Logout') do
-    find('.profil-link a[href *= dropdown]').click
-    find('.profil-link a[href $= logout]').click
+    @navbar.menu_usuario.click
+    @navbar.link_sair.click
 
 end
 

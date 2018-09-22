@@ -31,4 +31,9 @@ class LoginPage < SitePrism::Page
     element :botao_entrar, 'button[id*=btnLogin]'
     element :alerta_login, ".alert-login"
 
+    def logar(email,senha)
+        campo_email.set email
+        campo_senha.set senha
+        botao_entrar.click  
+    end
 end
