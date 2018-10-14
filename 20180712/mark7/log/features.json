@@ -1,0 +1,1057 @@
+[
+  {
+    "uri": "features/cadastrar_tarefas.feature",
+    "id": "cadastrar-tarefas",
+    "keyword": "Funcionalidade",
+    "name": "Cadastrar tarefas",
+    "description": "    Para que eu possa organizar minhas atividades\n    Sendo um usuário cadastrado\n    Posso cadastrar novas tarefas\n\n    - nome da tarefa: Fazer compras\n    - Data da etrega: 25/06/2018\n    - Tags (compras, supermercado, ketchup)",
+    "line": 7,
+    "tags": [
+      {
+        "name": "@sprint2",
+        "line": 6
+      }
+    ],
+    "comments": [
+      {
+        "value": "# edteste@esteste.com",
+        "line": 3
+      },
+      {
+        "value": "# 123456",
+        "line": 4
+      }
+    ],
+    "elements": [
+      {
+        "id": "cadastrar-tarefas;nova-tarefa",
+        "keyword": "Cenário",
+        "name": "Nova tarefa",
+        "description": "",
+        "line": 18,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@sprint2",
+            "line": 6
+          },
+          {
+            "name": "@autenticado",
+            "line": 17
+          },
+          {
+            "name": "@nova_tarefa",
+            "line": 17
+          },
+          {
+            "name": "@Logout",
+            "line": 17
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63695
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 75220
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46236
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10310736887
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu tenho uma tarefa com os seguintes atributos:",
+            "line": 20,
+            "rows": [
+              {
+                "cells": [
+                  "nome",
+                  "Fazer Compras"
+                ]
+              },
+              {
+                "cells": [
+                  "Data",
+                  "25/06/2018"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8993361999
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "eu quero taguear essa tarefa com:",
+            "line": 23,
+            "rows": [
+              {
+                "cells": [
+                  "tag"
+                ]
+              },
+              {
+                "cells": [
+                  "supermercado"
+                ]
+              },
+              {
+                "cells": [
+                  "ketchhup"
+                ]
+              },
+              {
+                "cells": [
+                  "compras"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 426525
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faço o cadastro dessa tarefa",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4287473719
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ver esta tarefa com o status \"Em andamento\"",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3578639816
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "devo ver somente 1 tarefa com o nome cadastrado",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2532843336
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 402835553
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 175725854
+            }
+          }
+        ]
+      },
+      {
+        "id": "cadastrar-tarefas;tarefa-não-pode-ser-duplicada",
+        "keyword": "Cenário",
+        "name": "Tarefa não pode ser duplicada",
+        "description": "",
+        "line": 33,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@sprint2",
+            "line": 6
+          },
+          {
+            "name": "@autenticado",
+            "line": 32
+          },
+          {
+            "name": "@tarefa_duplicada",
+            "line": 32
+          },
+          {
+            "name": "@Logout",
+            "line": 32
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80109
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 109792
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40369
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2831789050
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu tenho uma tarefa com os seguintes atributos:",
+            "line": 35,
+            "rows": [
+              {
+                "cells": [
+                  "nome",
+                  "Ler um livro de Go Lang"
+                ]
+              },
+              {
+                "cells": [
+                  "Data",
+                  "25/06/2018"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7399576125
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "eu quero taguear essa tarefa com:",
+            "line": 38,
+            "rows": [
+              {
+                "cells": [
+                  "tag"
+                ]
+              },
+              {
+                "cells": [
+                  "go"
+                ]
+              },
+              {
+                "cells": [
+                  "estudar"
+                ]
+              },
+              {
+                "cells": [
+                  "livro"
+                ]
+              },
+              {
+                "cells": [
+                  "hardcore"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 308143
+            }
+          },
+          {
+            "keyword": "Mas ",
+            "name": "eu já cadastrei essa tarefa e não tinha percebido",
+            "line": 44,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4897163908
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "faço o cadastro dessa tarefa",
+            "line": 45,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4860505404
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ver a mensagem \"Tarefa duplicada.\" ao tentar cadastrar",
+            "line": 46,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 628357466
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "devo ver somente 1 tarefa com o nome cadastrado",
+            "line": 47,
+            "match": {
+              "location": "features/step_definitions/tarefas_steps.rb:31"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Unable to find visible css \"input[name=search]\" (Capybara::ElementNotFound)\n./features/support/pages/tarefas_page.rb:41:in `busca'\n./features/step_definitions/tarefas_steps.rb:34:in `\"devo ver somente {int} tarefa com o nome cadastrado\"'\nfeatures/cadastrar_tarefas.feature:47:in `E devo ver somente 1 tarefa com o nome cadastrado'",
+              "duration": 10924400230
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:17"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Unable to find visible css \".profil-link a[href *= dropdown]\" (Capybara::ElementNotFound)\n./features/support/pages/navbar.rb:6:in `logout'\n./features/support/hooks.rb:18:in `After'",
+              "duration": 10063830215
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 326751263
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/login.feature",
+    "id": "login",
+    "keyword": "Funcionalidade",
+    "name": "Login",
+    "description": "    Para que eu possa ver as minhas tarefas\n    Sendo um usuário cadastrado\n    Posso logar no sistema",
+    "line": 3,
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "Formulário",
+        "description": "",
+        "line": 9,
+        "type": "background",
+        "comments": [
+          {
+            "value": "#",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 48331
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73962
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56503
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acessei o formulário de Login",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16301631194
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;login-do-usuário",
+        "keyword": "Cenario",
+        "name": "Login do usuário",
+        "description": "",
+        "line": 13,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@login",
+            "line": 12
+          },
+          {
+            "name": "@Logout",
+            "line": 12
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço login com \"edteste@esteste.com\" e \"123456\"",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:6"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Unable to find visible css \"input[name=email]\" (Capybara::ElementNotFound)\n./features/support/pages/login_page.rb:11:in `logar'\n./features/step_definitions/login_steps.rb:8:in `\"faço login com {string} e {string}\"'\nfeatures/login.feature:15:in `Quando faço login com \"edteste@esteste.com\" e \"123456\"'",
+              "duration": 10002483728
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "sou autenticado com sucesso",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:11"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "sou redirecionado para o painel de tarefas com a mensagem \"Olá, edgar\"",
+            "line": 17,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:15"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 567962336
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 473665358
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Formulário",
+        "description": "",
+        "line": 9,
+        "type": "background",
+        "comments": [
+          {
+            "value": "#",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57760
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39321
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38832
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acessei o formulário de Login",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 574078885
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;tentativa-de-logar;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Tentativa de Logar",
+        "description": "",
+        "line": 25,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço login com \"eu@papito.io\" e \"xpto123\"",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1101412269
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ver a mensagem de alerta \"Senha inválida.\"",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 408175952
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 254913854
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Formulário",
+        "description": "",
+        "line": 9,
+        "type": "background",
+        "comments": [
+          {
+            "value": "#",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91773
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32476
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 35130
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acessei o formulário de Login",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 709631857
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;tentativa-de-logar;;3",
+        "keyword": "Esquema do Cenário",
+        "name": "Tentativa de Logar",
+        "description": "",
+        "line": 26,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço login com \"padrequevedo@noequiziste.org\" e \"123456\"",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1199022341
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ver a mensagem de alerta \"Usuário não cadastrado.\"",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 268669297
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 156051935
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Formulário",
+        "description": "",
+        "line": 9,
+        "type": "background",
+        "comments": [
+          {
+            "value": "#",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 36317
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21371
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23188
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acessei o formulário de Login",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1003578704
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;tentativa-de-logar;;4",
+        "keyword": "Esquema do Cenário",
+        "name": "Tentativa de Logar",
+        "description": "",
+        "line": 27,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço login com \"fernando&qaninja.io\" e \"123456\"",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1179094056
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ver a mensagem de alerta \"Email incorreto ou ausente.\"",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 155417071
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 264734261
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Formulário",
+        "description": "",
+        "line": 9,
+        "type": "background",
+        "comments": [
+          {
+            "value": "#",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43511
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 22978
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27378
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acessei o formulário de Login",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 699636844
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;tentativa-de-logar;;5",
+        "keyword": "Esquema do Cenário",
+        "name": "Tentativa de Logar",
+        "description": "",
+        "line": 28,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço login com \"\" e \"123456\"",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 760256171
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ver a mensagem de alerta \"Email incorreto ou ausente.\"",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104077786
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150029323
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Formulário",
+        "description": "",
+        "line": 9,
+        "type": "background",
+        "comments": [
+          {
+            "value": "#",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62998
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32616
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 37924
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acessei o formulário de Login",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 557624400
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;tentativa-de-logar;;6",
+        "keyword": "Esquema do Cenário",
+        "name": "Tentativa de Logar",
+        "description": "",
+        "line": 29,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço login com \"eu@papito.io\" e \"\"",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 947623843
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ver a mensagem de alerta \"Senha ausente.\"",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/login_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 121797388
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.3.1/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 241054486
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

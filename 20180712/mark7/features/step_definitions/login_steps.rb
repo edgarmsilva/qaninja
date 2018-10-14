@@ -1,10 +1,6 @@
 
 Dado("que eu acessei o formulário de Login") do
-    visit 'https://mark7.herokuapp.com/'  
-    @login_page = LoginPage.new
-    @navbar = Navbar.new
-    @tarefa_page = TarefasPage.new
-    
+    visit '/login' 
 end
 
 Quando("faço login com {string} e {string}") do |email, senha|
@@ -18,7 +14,7 @@ end
 
 Então("sou redirecionado para o painel de tarefas com a mensagem {string}") do |mensagem_ola|
     
-    expect(@tarefa_page.painel).to have_content mensagem_ola
+    expect(@tarefas_page.painel).to have_content mensagem_ola
 
 end
 

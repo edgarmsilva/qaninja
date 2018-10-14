@@ -5,85 +5,16 @@ Funcionalidade: Login
     Sendo um usuário cadastrado
     Posso logar no sistema
 
-    # Email e senha
-    
-    # DDT => Data Driven Testing
-
-    # @login @Logout
-    # Cenario: Login do usuário
-
-    #     Dado que eu acessei o formulário de Login
-    #     Quando faço login com "eu@papito.io" e "123456"
-    #     Então sou autenticado com sucesso
-    #     E sou redirecionado para o painel de tarefas com a mensagem "Olá, Fernando"
-        
-    # @login_tentativa
-    # Cenario: Senha Inválida
-
-    #     Dado que eu acessei o formulário de Login
-    #     Quando faço login com "eu@papito.io" e "xpto123"
-    #     Então devo ver a mensagem de alerta "Senha inválida."
-    
-    # @login_tentativa
-    # Cenário: Usuário não existe
-
-    #     Dado que eu acessei o formulário de Login
-    #     Quando faço login com "padrequevedo@noequiziste.org" e "123456"
-    #     Então devo ver a mensagem de alerta "Usuário não cadastrado."
-
-    # Cenário: Email incorreto
-
-    #     Dado que eu acessei o formulário de Login
-    #     Quando faço login com "fernando&qaninja.io" e "123456"
-    #     Então devo ver a mensagem de alerta "Email incorreto ou ausente."
-
-
-
-
-# enxugando tudo parte 1: ---------------------------------------------------------------
-# Adição do contexto:
-
-# Contexto: Formulário
-#         Dado que eu acessei o formulário de Login
-
-#     @login @Logout
-#     Cenario: Login do usuário
-
-#         Quando faço login com "eu@papito.io" e "123456"
-#         Então sou autenticado com sucesso
-#         E sou redirecionado para o painel de tarefas com a mensagem "Olá, Fernando"
-        
-#     @login_tentativa
-#     Cenario: Senha Inválida
-
-#         Quando faço login com "eu@papito.io" e "xpto123"
-#         Então devo ver a mensagem de alerta "Senha inválida."
-    
-#     @login_tentativa
-#     Cenário: Usuário não existe
-
-#         Quando faço login com "padrequevedo@noequiziste.org" e "123456"
-#         Então devo ver a mensagem de alerta "Usuário não cadastrado."
-
-#     Cenário: Email incorreto
-
-#         Quando faço login com "fernando&qaninja.io" e "123456"
-#         Então devo ver a mensagem de alerta "Email incorreto ou ausente."
-
-
-
-# enxugando tudo parte 2: ---------------------------------------------------------------
-# Adição do Place Holder:
-
+    #
 Contexto: Formulário
         Dado que eu acessei o formulário de Login
 
     @login @Logout
     Cenario: Login do usuário
 
-        Quando faço login com "eu@papito.io" e "123456"
+        Quando faço login com "edteste@esteste.com" e "123456"
         Então sou autenticado com sucesso
-        E sou redirecionado para o painel de tarefas com a mensagem "Olá, Fernando"
+        E sou redirecionado para o painel de tarefas com a mensagem "Olá, edgar"
 
     Esquema do Cenário: Tentativa de Logar
         Quando faço login com "<email>" e "<senha>"
